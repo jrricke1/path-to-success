@@ -70,10 +70,12 @@ table {
 }
     /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 
+
 body {
     background-color: var(--Purple);
     display: grid;
     grid-template-columns: 1fr;
+    
 }
 
 header h1 {
@@ -124,7 +126,7 @@ nav h2 {
     border: none;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 15px;
+    padding: 12px;
 }
 
 .menu-links {
@@ -288,24 +290,29 @@ th {
     background-color: var(--Pink);
     padding: 5px 0 10px 0;
     margin: 10px 0 0 0;
+    text-align: center;
 }
+
 
 #first-steps h2 {
     color: var(--White);
     font-size: 2em;
     font-family: var(--large-header);
     padding: 10px 5px;
+    text-align: start;
 }
 
 #first-steps p {
     color: var(--White);
     font-family:  var(--other-content);
     line-height: 1.5;
-    margin: 0 10px;
+    margin: 0 10px 12px 10px;
+    text-align: start;
 }
 
+
 #first-steps a {
-    display: block;
+    display: inline-block;
     background-color: var(--White);
     color: var(--Dark-gray);
     font-family: var(--other-content);
@@ -313,10 +320,13 @@ th {
     text-decoration: none;
     text-align: center;
     justify-content: center;
-    margin: 0 65px;
-    padding: 20px;
+    margin: 10px auto;
+    width: 300px;
+    height: 25px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 3px 3px 3px var(--Dark-gray);
+    line-height: 1.5;
 }
 
 Footer {
@@ -335,14 +345,71 @@ Footer {
 footer a{
     color: var(--White);
 }
-
-
-
-
-
-
-
-
     /*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media screen and (min-width: 620px) {
+    span {
+        display: inline;
+    }
+
+    #services > section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #services h2 {
+        grid-column: 1 / span 2;
+    }
+
+    #services h3 {
+        grid-column: 1 / span 2;
+    }
+
+    #services  .icon-container:nth-child(2){
+        grid-column: 1 / span 1;
+    }
+
+    #services .icon-container:nth-child(3) {
+        grid-column: 2 / span 1;
+    }
+
+    #services .icon-container:nth-child(4) {
+        grid-column: 1 / span 2;
+    }
+
+    #services > section:nth-child(4) .icon-container:nth-child(2) {
+        grid-column: 1 / span 2;
+    }
+
+    #services > section:nth-child(5) .icon-container:nth-child(2) {
+        grid-column: 1 / span 2;
+    }
+
+    #choose-us ul {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr 1.3fr 1fr;
+    }
+
+    #choose-us h2 {
+        grid-column: 1 / span 4;
+    }
+
+    #pricing {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #pricing h2 {
+        grid-column: 1 / span 2;
+    }
+
+    #first-steps {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #first-steps h2 {
+        grid-column: 1 / span 2;
+    }
+}
     /*-------------------- MEDIA QUERY (large) ------------------------------------*/
     /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
