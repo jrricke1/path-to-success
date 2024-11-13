@@ -443,10 +443,10 @@ footer a{
     .menu-links a:hover {
         color: var(--White);
     }
-
+    
     #services {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4,1fr);
     }
 
     #services h3{
@@ -458,12 +458,12 @@ footer a{
         white-space: nowrap;
     }
 
-
+    
     .solo-coach, .group-coach, .workshops, .courses{
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
-
-
+    /*
     .solo-coach .icon-container:nth-child(2){
         grid-column: 1 / span 4;
     }
@@ -478,6 +478,7 @@ footer a{
 
     .group-coach .icon-container:nth-child(2){
         grid-column: 1 / span 4;
+        grid-row-start: 2;
     }
 
     .group-coach .icon-container:nth-child(3){
@@ -490,7 +491,7 @@ footer a{
 
     .courses .icon-container:nth-child(2){
         grid-column: 1 / span 4;
-    }
+    }*/
 
     #choose-us ul{
         grid-template-columns: repeat(4, 1fr);
@@ -509,7 +510,7 @@ footer a{
     /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 @media screen and (min-width: 1280px) {
     body {
-        width: 1300px;
+        width: 1280px;
         margin: auto;
     }
 }
