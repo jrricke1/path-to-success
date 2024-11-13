@@ -187,7 +187,7 @@ nav h2 {
 
 #services .icon-container {
     background-color: var(--White);
-    margin: 15px 20px;
+    margin: .5em .5em;
     border-radius: 10px;
 }
 
@@ -343,45 +343,31 @@ footer a{
         display: inline;
     }
 
-    .solo-coach, .group-coach, .workshops, .courses{
+    #services {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
 
-    #services h2 {
+    .solo-coach, .group-coach, .workshops, .courses{
+        grid-column: 1 / span 4;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #services h2, .solo-coach h3, .group-coach h3, .workshops h3, .courses h3 {
         grid-column: 1 / span 4;
     }
 
-    #services h3 {
+    .icon-container {
         grid-column: 1 / span 4;
     }
 
-    .solo-coach .icon-container:nth-child(2){
+    .solo-coach .icon-container:nth-child(2), .group-coach .icon-container:nth-child(2) {
         grid-column: 1 / span 2;
     }
 
-    .solo-coach .icon-container:nth-child(3) {
+    .solo-coach .icon-container:nth-child(3), .group-coach .icon-container:nth-child(3) {
         grid-column: 3 / span 2;
-    }
-
-    .solo-coach .icon-container:nth-child(4) {
-        grid-column: 1 / span 4;
-    }
-
-    .group-coach .icon-container:nth-child(2){
-        grid-column: 1 / span 2;
-    }
-
-    .group-coach .icon-container:nth-child(3){
-        grid-column: 3 / span 2;
-    }
-
-    .workshops .icon-container:nth-child(2){
-        grid-column: 1 / span 4;
-    }
-
-    .courses .icon-container:nth-child(2){
-        grid-column: 1 / span 4;
     }
    
     #choose-us ul {
@@ -444,11 +430,6 @@ footer a{
         color: var(--White);
     }
     
-    #services {
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-    }
-
     #services h3{
         white-space: nowrap;
         text-align: center;
@@ -460,38 +441,18 @@ footer a{
 
     
     .solo-coach, .group-coach, .workshops, .courses{
-        display: flex;
-        flex-direction: column;
+        grid-column: span 1;
+        grid-template-rows: 30px max-content max-content;
     }
-    /*
-    .solo-coach .icon-container:nth-child(2){
+    
+    .solo-coach .icon-container:nth-child(2), .group-coach .icon-container:nth-child(2) {
         grid-column: 1 / span 4;
     }
 
-    .solo-coach .icon-container:nth-child(3) {
+    .solo-coach .icon-container:nth-child(3), .group-coach .icon-container:nth-child(3) {
         grid-column: 1 / span 4;
     }
-
-    .solo-coach .icon-container:nth-child(4) {
-        grid-column: 1 / span 4;
-    }
-
-    .group-coach .icon-container:nth-child(2){
-        grid-column: 1 / span 4;
-        grid-row-start: 2;
-    }
-
-    .group-coach .icon-container:nth-child(3){
-        grid-column: 1 / span 4;
-    }
-
-    .workshops .icon-container:nth-child(2){
-        grid-column: 1 / span 4;
-    }
-
-    .courses .icon-container:nth-child(2){
-        grid-column: 1 / span 4;
-    }*/
+    
 
     #choose-us ul{
         grid-template-columns: repeat(4, 1fr);
